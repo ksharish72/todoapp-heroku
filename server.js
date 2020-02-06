@@ -5,7 +5,8 @@ let express = require("express"),
   bodyParser = require("body-parser");
 
 // mongoose instance connection url connection
-mongoose.connect("mongodb://localhost:27017/local", {
+//mongodb://localhost:27017/local
+mongoose.connect("mongodb://heroku_hhrr7tj9:bmm8rdplhmbdq6hvqbjjpqf4i5@ds061751.mlab.com:61751/heroku_hhrr7tj9", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
