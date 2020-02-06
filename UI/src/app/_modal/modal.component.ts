@@ -14,8 +14,8 @@ export class ModalComponent implements OnInit, OnDestroy {
     @Input() id: string;
     @Output() afterEditEvent = new EventEmitter();
     private element: any;
-    toDoItem: ToDoItem;
-
+    toDoItem: any;
+    currentDate: any
     constructor(private toDoService: TodoService, private modalService: ModalService, private el: ElementRef) {
         this.element = el.nativeElement;
     }
@@ -59,13 +59,13 @@ export class ModalComponent implements OnInit, OnDestroy {
             this.toDoService.getToDoItems().subscribe(items => {
                 this.afterEditEvent.next(items);
             });
-            this.closeModal('custom-modal-1')
+            this.closeModal();
         })
     }
     getAllToDoItems() {
         throw new Error("Method not implemented.");
     }
-    closeModal(arg0: string) {
+    closeModal() {
         this.modalService.close('custom-modal-1')
     }
 

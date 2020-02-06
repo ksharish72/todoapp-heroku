@@ -7,7 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AddtaskinputComponent implements OnInit {
   taskContent: string;
-  @Input() className:string;
+  @Input() className: string;
+  contentValue: any
   constructor() { }
 
   ngOnInit() {

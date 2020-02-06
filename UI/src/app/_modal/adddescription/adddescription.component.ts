@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AdddescriptionComponent implements OnInit {
   taskDescription: string;
-  @Input() contentValue: string;
+  @Input() contentValue: any;
   constructor() { }
 
   ngOnInit() {

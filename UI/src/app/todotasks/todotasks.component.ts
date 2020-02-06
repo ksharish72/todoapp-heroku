@@ -79,8 +79,9 @@ export class TodotasksComponent implements OnInit {
 export class AddToDoItemDialog implements OnInit {
   @Output() addEvent = new EventEmitter<any>();
   @Output() closeEvent = new EventEmitter();
-  currentDate: string;
-
+  currentDate: any;
+  dueDate:any;
+  dueTime:any;
   ngOnInit(): void {
     this.currentDate = new Date().toISOString().split("T")[0];;
   }
